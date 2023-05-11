@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 function Contact() {
   const users = useSelector((state) => state.users);
   console.log(users);
@@ -7,13 +8,21 @@ function Contact() {
     <div className="flex flex-1 flex-col items-center   bg-gray-200">
       <div className="-my-2  mt-12 w-full sm:-mx-6 lg:-mx-8">
         <div className="  align-middle inline-block min-w-full sm:px-6 lg:px-8">
+          <Link to="/create">
           <button class="bg-blue-500 hover:bg-blue-700 mb-12 text-white font-bold py-1 px-4 border border-blue-700 rounded">
             Create Contact
           </button>
+          </Link>
           <div className="shadow mr-5 overflow-hidden border-b border-gray-200 sm:rounded-lg">
             <table className="min-w-full divide-y divide-gray-200">
               <thead className="bg-gray-50">
                 <tr>
+                <th
+                    scope="col"
+                    className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    ID
+                  </th>
                   <th
                     scope="col"
                     className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
@@ -43,6 +52,15 @@ function Contact() {
               <tbody className="bg-white divide-y divide-gray-200">
                 {users.map((data) => (
                   <tr key={data.id}>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                      <div className="flex items-center">
+                        <div className="ml-2">
+                          <div className="text-sm font-medium text-gray-900">
+                            {data.id}
+                          </div>
+                        </div>
+                      </div>
+                    </td>
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="flex items-center">
                         <div className="ml-2">
