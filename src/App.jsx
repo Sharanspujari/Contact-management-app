@@ -1,17 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react'
 
+import './App.css'
+import Topbar from './Components/header/Topbar'
+import Sidebar from './Components/Sidebars/Sidebar'
+import { Routes,Route ,Outlet } from 'react-router-dom'
+import Contact from './Components/Contacts/Contact'
+import ChartAndMap from './Components/ChartsAndMaps/ChartAndMap'
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
-    <>
-      <div className='bg-green-400'>
-        <h1 className="text-3xl font-bold underline">Contact management app</h1>
-      </div>
-    </>
+  
+   <div>
+    <Topbar/>
+    <div className='flex sticky'>
+    <Sidebar/>
+
+  <Routes>
+   <Route path='/' element={<Contact/>}/>
+   <Route path='/charts_and_maps' element={<ChartAndMap/>}/>
+  </Routes>
+  <Outlet/>
+    </div>
+   
+   </div>
+    
   )
 }
 
