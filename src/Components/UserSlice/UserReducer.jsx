@@ -7,11 +7,21 @@ const userSlice=createSlice({
     reducers:{
    addUser:(state,action)=>{
     state.push(action.payload)
-    console.log(action)
+   
+},
+UpdateContact:(state,action)=>{
+const {id,firstname,lastname,status}=action.payload;
+const editContact=state.find(contact=>contact.id==id);
+if(editContact){
+    editContact.firstname=firstname;
+    editContact.lastname=lastname;
+    editContact.status=status;
 }
-    }
+}
+}
+    
 })
 
 
-export const{addUser}=userSlice.actions;
+export const{addUser,UpdateContact}=userSlice.actions;
 export default userSlice.reducer;

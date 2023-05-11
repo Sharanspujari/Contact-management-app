@@ -90,8 +90,9 @@ function Contact() {
                           href="#"
                           className="text-indigo-600   hover:text-indigo-900"
                         >
+                        <Link to={`/edit/${data.id}`}>
                         <button className="bg-indigo-500 rounded p-1 text-white hover:bg-indigo-800"> Edit</button>
-                         
+                        </Link>
                         </a>
                       </span>
                       <span>

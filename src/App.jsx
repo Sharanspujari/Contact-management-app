@@ -7,6 +7,7 @@ import { Routes,Route ,Outlet } from 'react-router-dom'
 import Contact from './Components/Contacts/Contact'
 import ChartAndMap from './Components/ChartsAndMaps/ChartAndMap'
 import Create from './Components/CreateContact/Create'
+import Update from './Components/CreateContact/Update'
 function App() {
   
 
@@ -21,6 +22,8 @@ function App() {
    <Route path='/' element={<Contact/>}/>
    <Route path='/charts_and_maps' element={<ChartAndMap/>}/>
    <Route path="/create" element={<Create/>}/>
+   <Route path="/edit/:id" element={<Update/>}/>
+   
   </Routes>
   <Outlet/>
     </div>
