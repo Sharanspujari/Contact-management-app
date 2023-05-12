@@ -8,24 +8,27 @@ import Contact from './Components/Contacts/Contact'
 import ChartAndMap from './Components/ChartsAndMaps/ChartAndMap'
 import Create from './Components/CreateContact/Create'
 import Update from './Components/CreateContact/Update'
+
 function App() {
   
 
   return (
   
-   <div>
+   <div className='w-full max-w-screen-xl overflow-x-hidden '>
     <Topbar/>
-    <div className='flex sticky'>
+    <div className='flex sticky '>
     <Sidebar/>
 
   <Routes>
    <Route path='/' element={<Contact/>}/>
+   
    <Route path='/charts_and_maps' element={<ChartAndMap/>}/>
+   
    <Route path="/create" element={<Create/>}/>
    <Route path="/edit/:id" element={<Update/>}/>
    
   </Routes>
-  <Outlet/>
+  
     </div>
    
    </div>

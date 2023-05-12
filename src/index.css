@@ -20,12 +20,11 @@
 
 
 
-body {
+* {
   margin: 0;
  padding: 0;
- position: relative;
-  flex:1;
-  background-color: rgb(233, 232, 232);
+ box-sizing: border-box;
+ 
  
 }
 

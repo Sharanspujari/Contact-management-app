@@ -5,7 +5,7 @@ const userSlice=createSlice({
     name:"users",
     initialState:ContactData,
     reducers:{
-   addUser:(state,action)=>{
+addUser:(state,action)=>{
     state.push(action.payload)
    
 },
@@ -17,11 +17,18 @@ if(editContact){
     editContact.lastname=lastname;
     editContact.status=status;
 }
+},
+deleteContact:(state,action)=>{
+    const {id}=action.payload;
+const DelContact=state.find(contact=>contact.id==id);
+if(DelContact){
+    return state.filter(d=>d.id!==id);
+}
 }
 }
     
 })
 
 
-export const{addUser,UpdateContact}=userSlice.actions;
+export const{addUser,UpdateContact,deleteContact}=userSlice.actions;
 export default userSlice.reducer;

@@ -5,7 +5,7 @@ import {IoMdContact,TiChartLine} from 'react-icons/all'
 function Sidebar() {
   
   return (
-    <div className='h-screen w-42  -w-64 fixed flex-4 justify-center   sticky bg-gray-600'>
+    <div className='h-screen w-42  -w-64  flex-4 justify-center   sticky bg-gray-600'>
 
   
    <ul className='p-2 flex flex-col items-center justify-items-center'>

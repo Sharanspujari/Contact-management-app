@@ -1,9 +1,15 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector ,useDispatch} from "react-redux";
 import { Link } from "react-router-dom";
+import { deleteContact } from "../UserSlice/UserReducer";
 function Contact() {
   const users = useSelector((state) => state.users);
-  console.log(users);
+  // console.log(users);
+
+const dispatch=useDispatch()
+  const handleDelete=(id)=>{
+    dispatch(deleteContact({id:id}))
+  }
   return (
     <div className="flex flex-1 flex-col items-center   bg-gray-200">
       <div className="-my-2  mt-12 w-full sm:-mx-6 lg:-mx-8">
@@ -50,7 +56,7 @@ function Contact() {
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
-                {users.map((data) => (
+                {users!=null ? ( users.map((data) => (
                   <tr key={data.id}>
                   <td className="px-6 py-4 whitespace-nowrap">
                       <div className="flex items-center">
@@ -100,7 +106,7 @@ function Contact() {
                           href="#"
                           className="text-red-600 ml-4 hover:text-indigo-900"
                         >
-                         <button className="bg-red-500 rounded p-1 text-white hover:bg-red-700">Delete</button> 
+                         <button onClick={()=>handleDelete(data.id)} className="bg-red-500 rounded p-1 text-white hover:bg-red-700">Delete</button> 
                         </a>
                       </span>
                       <span>
@@ -113,7 +119,8 @@ function Contact() {
                       </span>
                     </td>
                   </tr>
-                ))}
+                ))
+                ):<td>No Contact found please add contact from create conatact button</td>}
               </tbody>
             </table>
           </div>
