@@ -10,7 +10,7 @@ import React from 'react'
 function Topbar() {
   return (
   
-   <div className='w-full h-12 bg-blue-300   top-0  '>
+   <div className='w-full h-12 z-20 fixed flex  items-center bg-blue-300 p-3 top-0  '>
    <div className='flex items-center h-12 justify-between overflow-hidden py-4 mx-0'>
    <h3 className='font-bold  text-lg ml-4'>Dashboard</h3> 
    </div>

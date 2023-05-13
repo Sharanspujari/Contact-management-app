@@ -25,16 +25,16 @@ const navigate=useNavigate();
         navigate('/')
     }
    return (
-    <div className="flex-1 bg-slate-500 ">
+    <div className="flex-1 ">
    
-    <div className="bg-gray-200 h-full w-full flex items-center justify-center">
+    <div className=" h-full w-full overflow-hidden flex items-center justify-center">
     
-    <form  onSubmit={handleUpdate} className="w-full max-w-sm h-96 bg-red-200 flex flex-col rounded">
+    <form  onSubmit={handleUpdate} className="w-full max-w-sm h-96 bg-blue-100 mt-20 mr-24 flex flex-col rounded">
     <h3 className="font-bold ml-2 text-blue-500 mt-2">Update Contact</h3>
       <div className="md:flex md:items-center mt-14 mb-6">
         <div className="md:w-1/3">
           <label
-            className="block text-gray-500 text-white font-bold md:text-right mb-1 md:mb-0 pr-4"
+            className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
            
           >
             First Name :
@@ -42,7 +42,7 @@ const navigate=useNavigate();
         </div>
         <div className="md:w-2/3">
           <input
-            className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-62 py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+            className="bg-gray-100 appearance-none border-2 border-gray-200 rounded w-62 py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
             type="text"
             name="firstname"
             value={ufirstname}
@@ -54,7 +54,7 @@ const navigate=useNavigate();
       <div className="md:flex md:items-center mb-6">
         <div className="md:w-1/3">
           <label
-            className="block text-gray-500 text-white font-bold md:text-right mb-1 md:mb-0 pr-4"
+            className="block text-gray-500  font-bold md:text-right mb-1 md:mb-0 pr-4"
           
           >
             Last Name :
@@ -62,7 +62,7 @@ const navigate=useNavigate();
         </div>
         <div className="md:w-2/3">
           <input
-            className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-62 py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+            className="bg-gray-100 appearance-none border-2 border-gray-200 rounded w-62 py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
             type="text"
             name="lastname"
             value={ulastname}
@@ -74,7 +74,7 @@ const navigate=useNavigate();
       <div className="md:flex md:items-center mb-6">
         <div className="md:w-1/3">
           <label
-            className="block text-gray-500  text-white  font-bold md:text-right mb-1 md:mb-0 pr-4"
+            className="block text-gray-500  font-bold md:text-right mb-1 md:mb-0 pr-4"
             
           >
             Status :
