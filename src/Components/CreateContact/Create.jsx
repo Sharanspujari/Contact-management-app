@@ -25,7 +25,7 @@ function Create() {
 
   return (
     <div className="flex-1 ">
-      <div className=" h-full w-full  flex items-center justify-center">
+      <div className=" h-full w-full ml-32 flex items-center justify-center">
         <form
           onSubmit={handleSubmit}
           className="w-full mr-32 mt-20  max-w-sm h-96 bg-blue-100 flex flex-col rounded"

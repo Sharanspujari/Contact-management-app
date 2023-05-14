@@ -33,7 +33,7 @@ function DateWithRecovered() {
       {
         label: "COVID-19 Recovered with date",
         data: Object.keys(data.recovered).map((info) => {
-          console.log(data[info])
+         
           return data.recovered[info];
          
         }),

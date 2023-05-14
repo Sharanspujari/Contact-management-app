@@ -12,7 +12,7 @@ const fetchCData = async () => {
 };
 function DateCases() {
   const { data, isLoading, error } = useQuery("covidData", fetchCData);
-  console.log(data);
+ 
   
 
 
@@ -33,7 +33,7 @@ function DateCases() {
       {
         label: "COVID-19 Cases with date",
         data: Object.keys(data.cases).map((info) => {
-          console.log(data[info])
+         
           return data.cases[info];
          
         }),

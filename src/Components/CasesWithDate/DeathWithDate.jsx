@@ -33,7 +33,7 @@ function DeathWithDate() {
       {
         label: "COVID-19 Deaths with date",
         data: Object.keys(data.deaths).map((inf) => {
-          console.log(data[inf])
+          // console.log(data[inf])
           return data.deaths[inf];
          
         }),

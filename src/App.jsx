@@ -8,18 +8,20 @@ import Contact from "./Components/Contacts/Contact";
 import ChartAndMap from "./Components/ChartsAndMaps/ChartAndMap";
 import Create from "./Components/CreateContact/Create";
 import Update from "./Components/CreateContact/Update";
-
+import NavContext from "./Components/sideContext/navContext";
 function App() {
-  
+  const [sidebar, setSidebar] = useState();
+
   return (
     <div className=" flex-1 h-screen w-full">
      
+   <NavContext.Provider value={{ sidebar, setSidebar }}>
         <Topbar />
    
       <div className="flex sticky mt-20 items-center justify-between" >
         <div className="flex-1 ">
       
-          <Sidebar/>
+          <Sidebar />
         </div>
         <div className="w-9/12 mr-16">
           <Routes>
@@ -33,6 +35,7 @@ function App() {
           <Outlet />
         </div>
       </div>
+      </NavContext.Provider>
     </div>
   );
 }

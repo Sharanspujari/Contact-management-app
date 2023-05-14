@@ -48,7 +48,7 @@ function Contact() {
                   </th>
                   <th
                     scope="col"
-                    className="px-20 py-3  text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    className="px-12 py-3  text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                   >
                     Action
                   </th>
@@ -122,9 +122,7 @@ function Contact() {
                             href="#"
                             className="text-purple-600 ml-4 hover:text-indigo-900"
                           >
-                            <button className="bg-yellow-400 rounded p-1 text-white hover:bg-yellow-600">
-                              View
-                            </button>
+                           
                           </a>
                         </span>
                       </td>

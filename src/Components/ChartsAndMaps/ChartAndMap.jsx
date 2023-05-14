@@ -14,9 +14,9 @@ const fetchCovidData = async () => {
 };
 function ChatAndMap() {
   const { data, isLoading, error } = useQuery("covidData", fetchCovidData);
-  console.log(data);
+  // console.log(data);
 
-  const info = [data];
+  
 
   if (isLoading) {
     return <p>Loading...</p>;
