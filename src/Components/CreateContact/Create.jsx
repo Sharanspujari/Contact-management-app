@@ -24,8 +24,9 @@ function Create() {
   };
 
   return (
-    <div className="flex-1 ">
-      <div className=" h-full w-full ml-32 flex items-center justify-center">
+    <div className="flex-1 
+     border  xl:h-3/4   ">
+      <div className=" h-full w-full  ml-32 flex items-center justify-center">
         <form
           onSubmit={handleSubmit}
           className="w-full mr-32 mt-20  max-w-sm h-96 bg-blue-100 flex flex-col rounded"
@@ -33,7 +34,7 @@ function Create() {
           <h3 className="font-bold ml-5 text-blue-500 mt-2">
             Create New Contact
           </h3>
-          <div className="md:flex md:items-center mt-14 mb-6">
+          <div className="md:flex  md:items-center mt-14 mb-6 ml-4">
             <div className="md:w-1/3">
               <label className="block text-gray-500  font-bold md:text-right mb-1 md:mb-0 pr-4">
                 First Name :
@@ -49,7 +50,7 @@ function Create() {
               />
             </div>
           </div>
-          <div className="md:flex md:items-center mb-6">
+          <div className="md:flex md:items-center ml-4 mb-6">
             <div className="md:w-1/3">
               <label className="block text-gray-500  font-bold md:text-right mb-1 md:mb-0 pr-4">
                 Last Name :
@@ -65,7 +66,7 @@ function Create() {
               />
             </div>
           </div>
-          <div className="md:flex md:items-center mb-6">
+          <div className="md:flex md:items-center ml-4 mb-6">
             <div className="md:w-1/3">
               <label className="block text-gray-500    font-bold md:text-right mb-1 md:mb-0 pr-4">
                 Status :
@@ -105,7 +106,7 @@ function Create() {
             </div>
           </div>
 
-          <div className="md:flex md:items-center">
+          <div className="md:flex md:items-center 2xl:ml-6 sm:h-2/3">
             <div className="md:w-1/3 "></div>
             <div className="md:w-2/3 mt-2">
               <button className="shadow bg-purple-500 hover:bg-purple-800 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded">

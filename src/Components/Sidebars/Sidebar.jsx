@@ -15,7 +15,7 @@ const { sidebar, setSidebar } = useContext(NavContext);
   return (
 
    
-      <div className={` ${sidebar ? 'hidden':'w-42 bg-blue-800 h-screen fixed top-12 p-0 flex flex-1'}   `}>
+      <div className={` ${sidebar ? 'hidden':'w-42 bg-black h-screen fixed top-12 p-0 flex flex-1'}   `}>
         
       
         <ul className="p-2 flex flex-col items-center justify-items-center">
