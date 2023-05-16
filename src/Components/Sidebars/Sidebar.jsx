@@ -1,7 +1,7 @@
 import React ,{useContext}from "react";
 import { Link } from "react-router-dom";
 import { IoMdContact, TiChartLine ,RxCross2} from "react-icons/all";
-import NavContext from "../sideContext/navContext";
+import NavContext from "../sideContext/NavContext";
 
 
 function Sidebar() {

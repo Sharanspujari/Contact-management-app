@@ -1,6 +1,6 @@
 import React, { useState ,useContext} from 'react'
 import {GiHamburgerMenu} from 'react-icons/all'
-import NavContext from '../sideContext/navContext';
+import NavContext from '../sideContext/NavContext';
 
 
 
