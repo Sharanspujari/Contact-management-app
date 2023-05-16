@@ -51,6 +51,7 @@ function ChatAndMap() {
 
   return (
     <>
+       
       <div className=" w-full  bg-gray-100  overflow-x-hidden ">
         <Line data={chartData} />
       </div>
@@ -58,7 +59,7 @@ function ChatAndMap() {
       <DateCases />
       <DeathWithDate />
       <DateWithRecovered />
-      <Country />
+   
     
     </>
   );
