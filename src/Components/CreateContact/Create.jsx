@@ -25,7 +25,7 @@ function Create() {
 
   return (
     <div className="flex-1 
-     border  xl:h-3/4   ">
+    xl:h-3/4   ">
       <div className=" h-full w-full  ml-32 flex items-center justify-center">
         <form
           onSubmit={handleSubmit}

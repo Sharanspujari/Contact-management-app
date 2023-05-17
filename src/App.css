@@ -1,10 +1,15 @@
- /* #root {
- 
-  margin: 0 ;
-  padding: 0;
- 
-}  */
+ body {
+   flex: 1;
+ }
 
-body{
-  flex: 1;
-}
+
+ .leaflet-container {
+   width: 100vw;
+   height: 450px;
+
+   border-radius: 5px;
+ }
+
+ .leaflet-control-attribution {
+   font-size: 10px;
+ }

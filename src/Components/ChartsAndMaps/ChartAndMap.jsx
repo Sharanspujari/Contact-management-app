@@ -14,9 +14,6 @@ const fetchCovidData = async () => {
 };
 function ChatAndMap() {
   const { data, isLoading, error } = useQuery("covidData", fetchCovidData);
-  // console.log(data);
-
-  
 
   if (isLoading) {
     return <p>Loading...</p>;
@@ -38,7 +35,6 @@ function ChatAndMap() {
         data: Object.keys(data)
           .filter((i) => i !== "updated")
           .map((info) => {
-            console.log(data[info]);
             return data[info];
           }),
 
@@ -51,16 +47,14 @@ function ChatAndMap() {
 
   return (
     <>
-       
-      <div className=" w-full  bg-gray-100  overflow-x-hidden ">
+      <Country />
+      <div className=" w-full  bg-gray-100 mt-12 overflow-x-hidden ">
         <Line data={chartData} />
       </div>
-     
+
       <DateCases />
       <DeathWithDate />
       <DateWithRecovered />
-   
-    
     </>
   );
 }

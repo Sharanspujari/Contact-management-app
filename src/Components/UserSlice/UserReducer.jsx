@@ -24,11 +24,20 @@ const DelContact=state.find(contact=>contact.id==id);
 if(DelContact){
     return state.filter(d=>d.id!==id);
 }
-}
+},
+ShowContact:(state,action)=>{
+    const {id,firstname,lastname,status}=action.payload;
+    const viewContact=state.find(contact=>contact.id==id);
+    if(viewContact){
+        viewContact.firstname=firstname;
+        viewContact.lastname=lastname;
+        viewContact.status=status;
+    }
+    }
 }
     
 })
 
 
-export const{addUser,UpdateContact,deleteContact}=userSlice.actions;
+export const{addUser,UpdateContact,deleteContact,ShowContact}=userSlice.actions;
 export default userSlice.reducer;

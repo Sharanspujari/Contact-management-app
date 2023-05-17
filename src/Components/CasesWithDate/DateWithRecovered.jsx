@@ -12,10 +12,10 @@ const fetchCData = async () => {
 };
 function DateWithRecovered() {
   const { data, isLoading, error } = useQuery("covidData", fetchCData);
-  console.log(data);
+
   
 
-
+console.log('Datainfo:',data)
 
   if (isLoading) {
     return <p>Loading...</p>;

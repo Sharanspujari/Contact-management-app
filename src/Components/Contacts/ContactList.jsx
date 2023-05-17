@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { deleteContact } from "../UserSlice/UserReducer";
-function Contact() {
+function ContactList() {
   const users = useSelector((state) => state.users);
 
   const dispatch = useDispatch();
@@ -120,9 +120,16 @@ function Contact() {
                         <span>
                           <a
                             href="#"
-                            className="text-purple-600 ml-4 hover:text-indigo-900"
+                            className=" ml-4 p-1  text-white rounded hover:text-indigo-900"
                           >
-                           
+                           <Link to={`/view/${data.id}`}>
+                         <button
+                            
+                              className="bg-purple-600 rounded p-1 text-white hover:bg-red-700"
+                            >
+                              View
+                            </button>
+                            </Link>
                           </a>
                         </span>
                       </td>
@@ -143,4 +150,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default ContactList;
