@@ -84,7 +84,11 @@ function ContactList() {
                       <td className="px-6 py-4 whitespace-nowrap">
                         <span
                           className={`x-2 inline-flex text-xs leading-5
-                    font-semibold rounded-full bg-green-100 p-1 ${data.status==='active' ? 'text-green-600' :'text-red-600'} `}
+                    font-semibold rounded-full bg-green-100 p-1 ${
+                      data.status === "active"
+                        ? "text-green-600"
+                        : "text-red-600"
+                    } `}
                         >
                           {data.status}
                         </span>
@@ -92,45 +96,27 @@ function ContactList() {
 
                       <td className="px-6 py-4 whitespace-nowrap  text-left text-sm font-medium">
                         <span>
-                          <a
-                            href="#"
-                            className="text-indigo-600   hover:text-indigo-900"
-                          >
-                            <Link to={`/edit/${data.id}`}>
-                              <button className="bg-indigo-500 rounded p-1 text-white hover:bg-indigo-800">
-                                {" "}
-                                Edit
-                              </button>
-                            </Link>
-                          </a>
-                        </span>
-                        <span>
-                          <a
-                            href="#"
-                            className="text-red-600 ml-4 hover:text-indigo-900"
-                          >
-                            <button
-                              onClick={() => handleDelete(data.id)}
-                              className="bg-red-500 rounded p-1 text-white hover:bg-red-700"
-                            >
-                              Delete
+                          <Link to={`/edit/${data.id}`}>
+                            <button className="bg-indigo-500 rounded p-1 text-white hover:bg-indigo-800">
+                              {" "}
+                              Edit
                             </button>
-                          </a>
+                          </Link>
                         </span>
                         <span>
-                          <a
-                            href="#"
-                            className=" ml-4 p-1  text-white rounded hover:text-indigo-900"
+                          <button
+                            onClick={() => handleDelete(data.id)}
+                            className="bg-red-500 rounded m-1 p-1 text-white hover:bg-red-700"
                           >
-                           <Link to={`/view/${data.id}`}>
-                         <button
-                            
-                              className="bg-purple-600 rounded p-1 text-white hover:bg-red-700"
-                            >
+                            Delete
+                          </button>
+                        </span>
+                        <span>
+                          <Link to={`/view/${data.id}`}>
+                            <button className="bg-purple-600 rounded p-1 text-white hover:bg-red-700">
                               View
                             </button>
-                            </Link>
-                          </a>
+                          </Link>
                         </span>
                       </td>
                     </tr>

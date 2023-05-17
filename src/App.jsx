@@ -15,7 +15,7 @@ function App() {
   const [sidebar, setSidebar] = useState();
 
   return (
-    <div className=" flex-1 h-screen w-full">
+    <div className="  flex-1 h-screen w-full">
      
    <NavContext.Provider value={{ sidebar, setSidebar }}>
         <Topbar />

@@ -15,8 +15,8 @@ const { sidebar, setSidebar } = useContext(NavContext);
   return (
 
    
-      <div className={` ${sidebar ? 'hidden':'w-42 bg-black h-screen fixed top-12 p-0 flex flex-1'}   `}>
-        
+      <div className={` ${sidebar ? 'md:hidden':'w-42 bg-black h-screen fixed top-12 p-0 flex flex-1'}   `}>
+        <RxCross2 className="text-white"  onClick={()=>setSidebar(!sidebar)}/>
       
         <ul className="p-2 flex flex-col items-center justify-items-center">
 
